@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHtBusinessCategoriesTable extends Migration
+class CreateHtConfigRelationshipsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateHtBusinessCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('ht_business_categories', function (Blueprint $table) {
+        Schema::create('ht_config_relationships', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->mediumText('description')->nullable();
@@ -31,6 +31,6 @@ class CreateHtBusinessCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ht_business_categories');
+        Schema::dropIfExists('ht_config_relationships');
     }
 }

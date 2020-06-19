@@ -19,7 +19,7 @@ class CreateHtAdsTable extends Migration
             $table->string('product_image');
             $table->mediumText('product_details')->nullable();
             $table->bigInteger('category_id')->unsigned();
-            $table->foreign('category_id')->references('id')->on('ht_business_categories');
+            $table->foreign('category_id')->references('id')->on('ht_config_business_categories');
             $table->integer('quantity')->unsigned();
             $table->string('seller_name')->nullable();
             $table->integer('seller_phone_no')->unsigned();
