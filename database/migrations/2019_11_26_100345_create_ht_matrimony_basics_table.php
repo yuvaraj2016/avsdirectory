@@ -18,6 +18,7 @@ class CreateHtMatrimonyBasicsTable extends Migration
             $table->bigIncrements('id')->unsigned();
             $table->bigInteger('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
+            $table->string('profile_id',500);
             $table->string('name',500);
             $table->integer('age')->unsigned();
             $table->float('height',8,2)->nullable();
