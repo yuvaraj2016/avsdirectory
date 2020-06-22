@@ -43,7 +43,7 @@ class CreateHtCommunityProfilesTable extends Migration
             // $table->integer('no_male_child')->unsigned();
             // $table->integer('no_female_child')->unsigned();
             $table->string('uid',500)->unique();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

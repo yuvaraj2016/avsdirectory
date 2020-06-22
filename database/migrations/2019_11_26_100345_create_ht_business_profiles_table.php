@@ -30,7 +30,7 @@ class CreateHtBusinessProfilesTable extends Migration
             $table->string('business_website',500)->nullable();
             $table->mediumText('business_description')->nullable();
             $table->integer('view_count');
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

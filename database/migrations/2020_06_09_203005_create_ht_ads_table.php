@@ -28,7 +28,7 @@ class CreateHtAdsTable extends Migration
             $table->integer('discount')->unsigned();
             $table->integer('privacy')->default(1)->unsigned();
             $table->integer('valid_for')->unsigned();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

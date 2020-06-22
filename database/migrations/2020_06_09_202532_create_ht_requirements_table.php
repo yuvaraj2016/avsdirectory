@@ -22,7 +22,7 @@ class CreateHtRequirementsTable extends Migration
             $table->foreign('category_id')->references('id')->on('ht_config_business_categories');
             $table->integer('privacy')->default(1)->unsigned();
             $table->integer('valid_for')->unsigned();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

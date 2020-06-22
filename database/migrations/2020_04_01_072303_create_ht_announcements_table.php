@@ -19,7 +19,7 @@ class CreateHtAnnouncementsTable extends Migration
             $table->string('photo');
             $table->mediumText('description')->nullable();
             $table->integer('privacy')->default(1)->unsigned();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

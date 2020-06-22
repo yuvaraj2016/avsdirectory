@@ -28,7 +28,7 @@ class CreateHtFamilyProfilesTable extends Migration
             $table->bigInteger('marital_status')->unsigned();
             // $table->foreign('marital_status')->references('id')->on('ht_marital_statuses');
 
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

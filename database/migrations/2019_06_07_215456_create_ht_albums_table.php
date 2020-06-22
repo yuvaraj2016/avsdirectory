@@ -22,7 +22,7 @@ class CreateHtAlbumsTable extends Migration
             $table->mediumText('album_description')->nullable();
             $table->string('cover_picture');
             $table->integer('privacy')->default(1)->unsigned();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

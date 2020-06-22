@@ -17,7 +17,7 @@ class CreateHtConfigBloodGroupsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->mediumText('description')->nullable();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

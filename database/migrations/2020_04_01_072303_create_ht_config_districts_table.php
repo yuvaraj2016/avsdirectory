@@ -18,7 +18,7 @@ class CreateHtConfigDistrictsTable extends Migration
             $table->string('name');
             $table->string('code',100);
             $table->mediumText('description')->nullable();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();

@@ -23,7 +23,7 @@ class CreateHtEventTrackersTable extends Migration
             $table->string('user_organisation',500)->nullable();
             $table->string('user_location',1000)->nullable();
             $table->timestamp('accepted_on')->useCurrent();
-            $table->string('status')->nullable();
+            $table->integer('status')->nullable();
             $table->integer('created_by')->unsigned();
             $table->integer('updated_by')->unsigned();
             $table->timestamps();
