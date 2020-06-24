@@ -9,8 +9,12 @@ class CreateHtLikesPhotosTable extends Migration
     /**
      * Run the migrations.
      *
+
+
      * @return void
      */
+
+     //likes photo
     public function up()
     {
         Schema::create('ht_likes__photos', function (Blueprint $table) {
