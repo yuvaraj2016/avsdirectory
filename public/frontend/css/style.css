@@ -293,10 +293,11 @@ h1, h2, h3, h4, h5,
 
 /* Navbar */
 .site-navbar {
+
   margin-bottom: 0px;
   z-index: 1999;
   position: absolute;
-  top: 20px;
+  /* top: 20px; */
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -333,7 +334,7 @@ h1, h2, h3, h4, h5,
     .site-navbar .site-navigation .site-menu > li {
       display: inline-block; }
       .site-navbar .site-navigation .site-menu > li > a {
-        color: #000;
+        color: white;
         text-decoration: none !important;
         padding: 20px 10px;
         display: inline-block;
@@ -1757,19 +1758,21 @@ h1, h2, h3, h4, h5,
 
    /* body{margin-top:20px;}*/
     .holder {
-      background-color:#ccc;
+      background-color:rgba(100, 100, 100, 0.2);
+
       border-radius: 25px;
       /*width:300px;*/
       height:300px;
       overflow:hidden;
       padding:10px;
-      font-family:Helvetica;
+      font-family:sans-serif;
+      /* opacity: 0.7; */
     }
     .holder .mask {
       position: relative;
       left: 0px;
       top: 10px;
-      width:300px;
+      /* width:300px; */
       height:290px;
       overflow: hidden;
     }
@@ -1781,8 +1784,106 @@ h1, h2, h3, h4, h5,
     }
     .holder ul li {
       padding:10px 0px;
+      text-align: center;
     }
     .holder ul li a {
-      color:darkred;
+        color: white;
       text-decoration:none;
     }
+
+
+    @media (min-width: 300px) and (max-width: 1024px){
+        .holder{
+
+          margin-top: -133px;
+        }
+      }
+      @media (min-width: 300px) and (max-width: 1024px){
+        .ss{
+
+          margin-top: 20px;
+        }
+      }
+
+
+
+      .marquee {
+        margin: 0 auto;
+        /* white-space: nowrap; */
+        overflow: hidden;
+        position: absolute;
+      }
+
+      .marquee span {
+        display: inline-block;
+        /* padding-left: 100%; */
+        animation: marquee 25s linear infinite;
+        color:white;
+      }
+
+      .marquee2 span {
+        animation-delay: -2s;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translate(0, 0);
+        }
+        100% {
+          transform: translate(-100%, 0);
+        }
+      }
+
+
+      /* .site-navbar .site-navigation .site-menu > li > a:hover{
+    font-size: 50%;
+} */
+ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    list-style-type: none;
+  }
+  ul li {
+    padding: 6px 0;
+  }
+  ul li a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    /* font-family: "Lato"; */
+    /* font-size: 2rem;; */
+    color: #ecf0f1;
+    /* text-transform: uppercase; */
+    padding: 4px 0;
+    transition: 0.5s;
+
+  }
+  ul li a::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 3px;
+    top: 80%;
+    left: 0;
+    background: #ff7000;
+    transition: transform 0.5s;
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  ul li a:hover {
+    color: #95a5a6;
+  }
+  ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+
+@media (min-width: 300px) and (max-width: 1024px){
+    .sha{
+        -webkit-box-shadow: 3px 3px 5px 6px #ccc;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+        -moz-box-shadow:    3px 3px 5px 6px #ccc;  /* Firefox 3.5 - 3.6 */
+        box-shadow:         3px 3px 5px 6px #ccc;
+    }
+  }

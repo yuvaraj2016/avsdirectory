@@ -1,10 +1,10 @@
 @extends('master')
 @section('content')
-<div class="site-blocks-cover overlay" style="background-image: url(frontend/images/hero_2.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+<div class="site-blocks-cover overlay" style="background-image: url(frontend/images/natrajar.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
         <div class="row col-md-12 align-items-center justify-content-center text-center" >
 
-          <div class="col-md-6" style="margin-top: 70px" >
+          <div class="col-md-6 ss" >
                 <form action="">
                     <div class="form-group">
                         <input type="text" class="form-control rounded" placeholder="What are you looking for?">
@@ -50,7 +50,20 @@
               </div>
         </div>
 
+
+
+
+
+
         </div>
+        {{-- <div class="row col-md-12" style="margin-top: -133px">
+            <p class="marquee">
+                <span>This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text - This is text fygufgfxhfjgyfdxthdxfhdfhttttttttt-sdfghjkjhgfdfghjhgfd -&nbsp;</span>
+              </p>
+
+
+
+            </div> --}}
       </div>
     </div>
 
@@ -59,42 +72,42 @@
 
         <div class="overlap-category mb-5">
           <div class="row align-items-stretch no-gutters">
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
+            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2 sha">
               <a href="#" class="popular-category h-100">
                 <span class="icon"><span class="flaticon-house"></span></span>
                 <span class="caption mb-2 d-block">Real Estate</span>
                 <span class="number">3,921</span>
               </a>
             </div>
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
+            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2 sha">
               <a href="#" class="popular-category h-100">
                 <span class="icon"><span class="flaticon-books"></span></span>
                 <span class="caption mb-2 d-block">Books &amp; Magazines</span>
                 <span class="number">398</span>
               </a>
             </div>
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
+            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2 sha">
               <a href="#" class="popular-category h-100">
                 <span class="icon"><span class="flaticon-bunk-bed"></span></span>
                 <span class="caption mb-2 d-block">Furniture</span>
                 <span class="number">1,229</span>
               </a>
             </div>
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
+            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2 sha">
               <a href="#" class="popular-category h-100">
                 <span class="icon"><span class="flaticon-innovation"></span></span>
                 <span class="caption mb-2 d-block">Electronics</span>
                 <span class="number">32,891</span>
               </a>
             </div>
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
+            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2 sha">
               <a href="#" class="popular-category h-100">
                 <span class="icon"><span class="flaticon-car"></span></span>
                 <span class="caption mb-2 d-block">Cars &amp; Vehicles</span>
                 <span class="number">29,221</span>
               </a>
             </div>
-            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2">
+            <div class="col-sm-6 col-md-4 mb-4 mb-lg-0 col-lg-2 sha">
               <a href="#" class="popular-category h-100">
                 <span class="icon"><span class="flaticon-pizza"></span></span>
                 <span class="caption mb-2 d-block">Other</span>
