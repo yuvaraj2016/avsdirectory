@@ -1838,16 +1838,17 @@ h1, h2, h3, h4, h5,
       /* .site-navbar .site-navigation .site-menu > li > a:hover{
     font-size: 50%;
 } */
+/* menu hover background color  25.06.2020*/
 ul {
     display: flex;
     flex-direction: column;
     align-items: start;
     list-style-type: none;
   }
-  ul li {
+  ul .eff {
     padding: 6px 0;
   }
-  ul li a {
+  ul .eff a {
     position: relative;
     display: block;
     text-decoration: none;
@@ -1859,7 +1860,7 @@ ul {
     transition: 0.5s;
 
   }
-  ul li a::after {
+  ul .eff a::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -1871,7 +1872,7 @@ ul {
     transform: scaleX(0);
     transform-origin: right;
   }
-  ul li a:hover {
+  ul .eff a:hover {
     color: #95a5a6;
   }
   ul li a:hover::after {
@@ -1879,11 +1880,49 @@ ul {
     transform-origin: left;
   }
 
-
+/* new ticker mobile view 25.06.2020*/
 @media (min-width: 300px) and (max-width: 1024px){
     .sha{
-        -webkit-box-shadow: 3px 3px 5px 6px #ccc;
-        -moz-box-shadow:    3px 3px 5px 6px #ccc;
-        box-shadow:         3px 3px 5px 6px #ccc;
+        -webkit-box-shadow: 3px 3px 5px 2px #ccc;
+        -moz-box-shadow:    3px 3px 5px 2px #ccc;
+        box-shadow:         3px 3px 5px 2px #ccc;
     }
+  }
+
+/* top button postion  25.06.2020*/
+  #button {
+    display: inline-block;
+    /* background-color: #FF9800; */
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+      opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  #button::after {
+    /* content: "\f077"; */
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+  }
+  #button:hover {
+    cursor: pointer;
+    /* background-color: #333; */
+  }
+  #button:active {
+    background-color: #555;
+  }
+  #button.show {
+    opacity: 0.6;
+    visibility: visible;
   }

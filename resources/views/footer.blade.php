@@ -109,6 +109,20 @@ jQuery.fn.liScroll = function(settings) {
 $(function(){
     $("ul#ticker01").liScroll();
 });
+var btn = $('#button');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
 
   </script>
   </body>

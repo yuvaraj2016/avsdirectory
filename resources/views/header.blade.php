@@ -3,6 +3,7 @@
 
   <body>
 
+    <a id="button"> <img src="frontend/images/up-arrow.png" height="48px"> </a>
   <div class="site-wrap">
 
     <div class="site-mobile-menu">
@@ -29,9 +30,9 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class="active"><a href="{{url('/')}}">Home</a></li>
+                <li class="active eff"><a href="{{url('/')}}">Home</a></li>
                 {{-- <li><a href="{{url('listings')}}">Ads</a></li> --}}
-                <li>
+                <li class="eff">
                   <a href="{{ url('about')}}">About Us</a>
                   {{-- <ul class="dropdown">
                     <li><a href="#">The Company</a></li>
@@ -40,31 +41,31 @@
                     <li><a href="#">Careers</a></li>
                   </ul> --}}
                 </li>
-                <li class="has-children">
+                <li class="has-children eff">
                     <a href="{{ url('about')}}">Business</a>
                     <ul class="dropdown">
-                      <li><a href="#">Business Listing</a></li>
-                      <li><a href="#">Business Requirements & Ads</a></li>
+                      <li class="eff"><a href="#">Business Listing</a></li>
+                      <li class="eff"><a href="#">Business Requirements & Ads</a></li>
                       {{-- <li><a href="#">Gallery</a></li>
                       <li><a href="#">Careers</a></li> --}}
                     </ul>
                   </li>
-                <li><a href="{{ url('blog')}}">Martrimony</a></li>
-                <li class="has-children">
+                <li class="eff"><a href="{{ url('blog')}}">Martrimony</a></li>
+                <li class="has-children eff">
                     <a href="{{ url('about')}}">Community</a>
                     <ul class="dropdown">
-                      <li><a href="#">Announcements & Help</a></li>
-                      <li><a href="#">Events</a></li>
-                      <li><a href="#">Gallery</a></li>
+                      <li class="eff"><a href="#">Announcements & Help</a></li>
+                      <li class="eff"><a href="#">Events</a></li>
+                      <li class="eff"><a href="#">Gallery</a></li>
                       {{-- <li><a href="#">Careers</a></li> --}}
                     </ul>
                   </li>
-                <li><a href="{{ url('contact') }}">Contact</a></li>
-                <li class="has-children">
+                <li class="eff"><a href="{{ url('contact') }}">Contact</a></li>
+                <li class="has-children eff">
                     <a href="{{ url('about')}}">Profile</a>
                     <ul class="dropdown">
-                      <li><a href="#">Login</a></li>
-                      <li><a href="#">Register</a></li>
+                      <li class="eff"><a href="{{url('login')}}">Login</a></li>
+                      <li class="eff"><a href="{{ url('register')}}">Register</a></li>
                       {{-- <li><a href="#">Gallery</a></li> --}}
                       {{-- <li><a href="#">Careers</a></li> --}}
                     </ul>
