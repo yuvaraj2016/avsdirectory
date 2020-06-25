@@ -36,11 +36,19 @@ Route::get('/listings', function () {
     return view('listings');
 });
 Route::get('/login', function () {
-    return view('login');
+    return view('Admin.login');
 });
 Route::get('/register', function () {
     return view('register');
 });
 Route::get('/contact', function () {
     return view('contact');
+});
+
+
+Route::get('admin/login', function () {
+    return view('Admin.login');
+});
+Route::get('admin/register', function () {
+    return view('Admin.register');
 });

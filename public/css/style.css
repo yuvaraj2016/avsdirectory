@@ -22101,7 +22101,9 @@ dl li {
 }
 
 .main-panel {
-  background: #f0f3f6;
+  /* background-image: url("images/avs_bg.jpg"); */
+  background-position: center center;
+  background-size: cover;
   width: 100%;
   transition: width 0.25s ease, margin 0.25s ease;
   min-height: calc(100vh - 56px);
