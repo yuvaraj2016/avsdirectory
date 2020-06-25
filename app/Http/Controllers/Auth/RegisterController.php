@@ -8,6 +8,9 @@ use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use GuzzleHttp\Client;
+use Laravel\Passport\Client as OClient;
+
 
 class RegisterController extends Controller
 {
@@ -30,6 +33,8 @@ class RegisterController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+
+    public $successStatus = 200;
 
     /**
      * Create a new controller instance.
@@ -70,4 +75,53 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+
+    public static function getTokenAndRefreshToken() {
+        // $oClient = OClient::where('password_client', 2)->first();
+        try{
+            $http = new Client;
+            $response = $http->request('POST', 'http://avsapi.hridham.com/oauth/token', [
+                'form_params' => [
+                    'grant_type' => 'password',
+                    'client_id' => '2',
+                    'client_secret' => 'NPbuAQtxjb0XLXu1nE1vzMkYsC83MCrnCStVilpT',
+                    'username' => 'admin@gmail.com',
+                    'password' => '12345678',
+                    'scope' => '*',
+                ],
+            ]);
+
+            if($response->getStatusCode() === 200)
+            {
+                $result = json_decode((string) $response->getBody(), true);
+                return response()->json($result, 200);
+
+            }
+
+
+        }
+        catch(BadResponseException $ex)
+        {
+            $data = json_decode($ex->getResponse()->getBody()->getContents(), true);
+            $errors = [];
+
+            foreach($data as $k=>$v)
+                $errors[$k]=$v;
+            return response()->json($errors);
+        }
+        if($response->getStatusCode() == 201)
+        {
+            $tokenresponse = json_decode($response->getBody(),true);
+
+            return response()->json($tokenresponses);
+
+        }
+        else
+        {
+            return 'Internal Server Error!<br>Check oauth/token<br>'.$response;
+        }
+
+
+    }
+
 }

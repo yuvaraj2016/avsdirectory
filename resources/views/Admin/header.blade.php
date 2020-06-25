@@ -1,3 +1,12 @@
+@php
+$reg=new App\Http\Controllers\Auth\Registercontroller;
+$response = $reg->getTokenAndRefreshToken();
+// echo $accesstoken->getData()->access_token;
+$accesstoken = $response->getData()->access_token;
+session()->put('access_token', $accesstoken);
+
+@endphp
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
