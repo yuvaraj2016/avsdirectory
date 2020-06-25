@@ -1,5 +1,8 @@
 @extends('Admin.layout')
 @section('main_content')
+@php
+echo session()->get('access_token');
+@endphp
 		<div class="container-fluid page-body-wrapper">
 			<div class="main-panel">
 				<div class="content-wrapper">
